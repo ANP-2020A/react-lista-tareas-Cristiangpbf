@@ -1,12 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './styles/index.css';
+import UserList from './components/UserList';
+import TodoList from './components/TodoList';
 import * as serviceWorker from './serviceWorker';
+
+const initialUsers = [
+    {
+        firstName: 'Cristian',
+        lastName: 'Guamba'
+    },
+    {
+        firstName: 'Daniela',
+        lastName: 'Guamba'
+    },
+    {
+        firstName: 'Darío',
+        lastName: 'Guamba'
+    }
+];
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <UserList users={initialUsers}/>
+      <TodoList />
   </React.StrictMode>,
   document.getElementById('root')
 );
